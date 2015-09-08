@@ -1,6 +1,4 @@
-from json import dumps
-
-from flask import Flask, redirect, request
+from flask import Flask
 from flask.ext.autodoc import Autodoc
 from flask.ext.restless import APIManager
 from flask.ext.sqlalchemy import SQLAlchemy
