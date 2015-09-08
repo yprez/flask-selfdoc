@@ -20,9 +20,11 @@ class Post(db.Model):
     title = db.Column(db.String(40), unique=True)
     content = db.Column(db.String(300))
 
+# Create API endpoints for SQLAlchemy models:
 manager.create_api(User)
 manager.create_api(Post, methods=['GET', 'POST', 'DELETE'])
 
+# Decorate all endpoints with Autodoc.doc():
 for endpoint, function in app.view_functions.iteritems():
     app.view_functions[endpoint] = auto.doc()(function)
 
