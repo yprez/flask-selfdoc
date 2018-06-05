@@ -316,6 +316,7 @@ class TestAutodocFactoryPattern(TestAutodoc):
         self.autodoc = Autodoc()
         self.autodoc.init_app(self.app)
 
+
 class TestMultipleApps(unittest.TestCase):
 
     def setUp(self):
