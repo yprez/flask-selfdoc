@@ -150,7 +150,7 @@ class Autodoc(object):
 
             if func_groups.intersection(groups_to_generate):
                 props = dict(
-                    methods=rule.methods,
+                    methods=sorted(list(rule.methods)),
                     rule="%s" % rule,
                     endpoint=rule.endpoint,
                     docstring=func.__doc__,
@@ -215,7 +215,7 @@ class Autodoc(object):
             return {
                 "args": [(arg, doc['defaults'][arg]) for arg in args],
                 "docstring": doc['docstring'],
-                "methods": sorted(list(doc['methods'])),
+                "methods": doc['methods'],
                 "rule": doc['rule']
             }
         data = {
