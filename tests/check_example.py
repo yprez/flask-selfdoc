@@ -5,6 +5,7 @@ from examples.simple.blog import app as simple_app
 
 class TestSimpleApp(unittest.TestCase):
     maxDiff = None
+
     def setUp(self):
         self.app = simple_app
         self.client = self.app.test_client()
@@ -15,7 +16,7 @@ class TestSimpleApp(unittest.TestCase):
         data = r.data.decode('utf-8')
         with open("tests/files/simple.html") as f:
             expected = f.read()
-        
+
         self.assertEqual(data, expected)
 
 
