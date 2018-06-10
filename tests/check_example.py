@@ -27,6 +27,12 @@ class TestSimpleApp(TestApp, unittest.TestCase):
     path = "/doc"
 
 
+class TestSimpleAppPrivateGroup(TestApp, unittest.TestCase):
+    app = simple_app
+    filename = "tests/files/simple_private.html"
+    path = "/doc/private"
+
+
 class TestFactoryApp(TestApp, unittest.TestCase):
     filename = "tests/files/factory.html"
     path = "/doc/"
