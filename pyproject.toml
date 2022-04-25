@@ -20,5 +20,5 @@ check_pypi = 'run_tests:check_pypi'
 check_pypi_prerelease = 'run_tests:check_pypi_prerelease'
 
 [build-system]
-requires = ["poetry-core>=1.0.0", "setuptools"]
+requires = ["poetry-core>=1.0.0", "setuptools>=60"]
 build-backend = "poetry.core.masonry.api"
